@@ -1,0 +1,13 @@
+# required versioning
+
+pandas == 2.2.2
+seaborn == 0.13.2
+transformers == 4.49.0
+matplotlib == 3.9.2
+nltk == 3.9.1
+umap-learn == 0.5.7
+bertopic == 0.17.0
+hdbscan >= 0.8.29
+plotly == 2.35.2
+
+python == 3.12.7
