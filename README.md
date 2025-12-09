@@ -1,7 +1,7 @@
-# course-project-nitomanto
-course-project-nitomanto created by GitHub Classroom
+# The T Word
+I'll finalize the title later
 
-## Final Project for MACS 30200
+## what is this title gonna be
 
 by Anita Sun
 
