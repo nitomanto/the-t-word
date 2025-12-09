@@ -1,7 +1,7 @@
 # The T Word
 I'll finalize the title later
 
-## what is this title gonna be
+## University of Chicago Computational Social Science Master's Thesis
 
 by Anita Sun
 
