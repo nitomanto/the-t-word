@@ -1,5 +1,4 @@
-# The T Word
-I'll finalize the title later
+# The T Word (In Progress, Anticipated Completion June 2026)
 
 ## University of Chicago Computational Social Science Master's Thesis
 
