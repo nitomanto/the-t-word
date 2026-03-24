@@ -154,7 +154,8 @@ Finally, there is the issue of interpreting a user following a campaign TikTok a
 
 \section{Results}
 
-In my mockup results section, I present visualizations and analyses of two proxy datasets. The first proxy dataset used is a corpus of Donald Trump's X posts, formerly known as Twitter Tweets, during his first presidential term, retrieved from \href{https://www.thetrumparchive.com}{thetrumparchive.com}.
+\subsection{Frequent Itemset Mining}
+[lets talk about itemset mining, since that's what i have done (mostly)]
 \begin{figure}
 \begin{adjustwidth}{-2cm}{-2cm} % Adjust margins: left and right
     \begin{minipage}{\linewidth}
@@ -195,13 +196,11 @@ Figure \ref{topics_over_time} allows us to see the progression of Trump's politi
     \end{minipage}
 \end{adjustwidth}
 
-\section{Feasibility, Timeline, and Resources}
+\section{Discussion}
 
-I had earlier articulated the uncertainty of the data collection process; though the preferred method of data collection is not guaranteed, there are other possible methods of data collection that range in costs. If the project is executed using the TikTok Research API or dynamic scraping, there the matter of data storage. During the data collection process, I will likely store the data in a private S3 bucket on AWS before transferring the data to the airlocked Midway Computing Cluster for data analysis. I will consult with RCC in order to set up a data storage plan. This will incur some additional costs. The estimated range for costs, after consulting several paid scraping service websites and AWS pricing, can fall anywhere from \$50 USD to \$1,000 USD, and this budget range is due to unpredictability of the API and the variance in cost for alternative datasets.
+\section{Conclusion}
 
-I will use Midway Computing Cluster for secure storage of the dataset, as well as utilizing its computing resources for analyzing the dataset. This comes from a shared departmental budget for computing resources, and in the case that my required computing power exceeds that of the budget, I will contact Jon Clindaniel to develop a solution. There are several instructors I will approach with this research proposal in hopes of taking them on as an advisor; I will ask Dr. Zhao Wang and Dr. Ali Sanaei. I have already consulted with Dr. Fabricio Vasselai, who will serve as a primary investigator on my API application and continue to provide support while he transitions into his new role at another institution.
 
-The expected timeline of the project will span the remaining length of time I have in my master's degree program. I will spend a few months configuring my data collection options and setting up my data, which I estimate to occur between October and November 2025. I then intend to spend another few months analyzing the data, which will happen between December 2025 and January 2026. Finally, writing drafts and revisions will be the last and most time consuming part of this process, which I expect to happen between February and April of 2026.
 
 %\lipsum[1-3]
 \newpage
