@@ -1,0 +1,4 @@
+,Metric,Harris Mean,Harris SD,Trump Mean,Trump SD,t-statistic
+0,Node Degree,8.91e-05,1.21e-03,1.43e-04,1.48e-03,-15.57***
+1,Node Betweenness,3.38e-06,5.42e-04,6.93e-06,8.06e-04,-1.972*
+2,Node Pagerank,2.05e-06,7.40e-05,4.05e-06,9.60e-05,-9.082***
