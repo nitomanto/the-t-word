@@ -316,7 +316,7 @@ However, turning to Figure \ref{confidence_lift}, we see that the distribution o
         \centering
         \includegraphics[width=0.5\linewidth]{viz/gt_network_stats.png}
         \captionsetup{width=0.9\linewidth, justification=centering} 
-        \captionof{figure}{Network level descriptive statistics for the Harris and Trump hashtag co-occurrence social networks. Average Clustering Coefficient is approximated with networkx, and the number shown here is an approximate lower bound for the true value. Note that edges are weighted by the number of co-occurrences for any two hashtags. One TikTok repost equates to one co-occurrence.}
+        \captionof{figure}{Network level descriptive statistics for the Harris and Trump hashtag co-occurrence social networks. Average Clustering Coefficient and Diameter are approximated with built-in networkx approximation algorithms, and the numbers shown here is an lower bound for the true value. Note that edges are weighted by the number of co-occurrences for any two hashtags. One TikTok repost equates to one co-occurrence.}
         \label{network_stats}
     \end{minipage}
 \end{adjustwidth}
@@ -336,7 +336,7 @@ Pivoting now to the hashtag co-occurrence networks, we begin to find high-level 
 \end{adjustwidth}
 \end{figure}
 
-Figure \ref{network_t_test} demonstrates that the Trump co-occurrence network, alongside being denser, has a higher average degree and higher average betweenness than the Harris co-occurrence network. Looking at Figure \ref{degree_density},  we can see that this difference in degree holds across the entire distribution and not just at tail ends. 
+Figure \ref{network_t_test} demonstrates that the Trump co-occurrence network, alongside being denser, has a higher average degree and higher average betweenness than the Harris co-occurrence network. This suggests that the semantic communities in the Trump co-occurrence network are more centrally concentrated and overlapping than those found in the Harris co-occurrence network.
 
 \begin{figure}[t]
 \begin{adjustwidth}{-2cm}{-2cm}
@@ -349,6 +349,10 @@ Figure \ref{network_t_test} demonstrates that the Trump co-occurrence network, a
     \end{minipage}
 \end{adjustwidth}
 \end{figure}
+
+\subsection{BERTopic Bootstrap Models}
+
+
 
 \section{Discussion}
 
