@@ -296,7 +296,7 @@ Notice also in Figure \ref{hashtag_support} that '\#fyp' is actually tagged at a
 
 However, turning to Figure \ref{confidence_lift}, we see that the distribution of both confidence and lift of mined association rules is higher for Harris follower reposts than Trump follower reposts. The higher overall confidence suggests that the associations are more prevalent, while the higher overall lift connotes a unique association between consequent and antecedent. The implication is that on the whole, Harris followers have stronger and more consolidated association rules.
 
-\begin{figure}[t]
+\begin{figure}[h]
 \begin{adjustwidth}{-2cm}{-2cm}
     \begin{minipage}{\linewidth}
         \centering
@@ -310,13 +310,14 @@ However, turning to Figure \ref{confidence_lift}, we see that the distribution o
 
 \subsection{Hashtag Co-Occurrence Network Analysis}
 
-\begin{figure}[t]
+\begin{figure}[h]
 \begin{adjustwidth}{-2cm}{-2cm}
     \begin{minipage}{\linewidth}
         \centering
         \includegraphics[width=0.5\linewidth]{viz/gt_network_stats.png}
+        \includegraphics[width=0.7\linewidth]{viz/network_t_test.png}
         \captionsetup{width=0.9\linewidth, justification=centering} 
-        \captionof{figure}{Network level descriptive statistics for the Harris and Trump hashtag co-occurrence social networks. Average Clustering Coefficient and Diameter are approximated with built-in networkx approximation algorithms, and the numbers shown here is an lower bound for the true value. Note that edges are weighted by the number of co-occurrences for any two hashtags. One TikTok repost equates to one co-occurrence.}
+        \captionof{figure}{Network level descriptive statistics for the Harris and Trump hashtag co-occurrence social networks. Average Clustering Coefficient and Diameter are approximated with built-in networkx approximation algorithms, and the numbers shown here is an lower bound for the true value. Note that edges are weighted by the number of co-occurrences for any two hashtags. One TikTok repost equates to one co-occurrence. [I'll reformat the table and add my p values soon]}
         \label{network_stats}
     \end{minipage}
 \end{adjustwidth}
@@ -324,19 +325,11 @@ However, turning to Figure \ref{confidence_lift}, we see that the distribution o
 
 Pivoting now to the hashtag co-occurrence networks, we begin to find high-level structural patterns in the semantic discourse. A glance at Figure \ref{network_stats} shows that the the Harris network is larger, both in terms of nodes and edges as well as the diameter of the maximal component. This is in line with expectations, as there are more Harris follower reposts than Trump follower reposts. Interestingly,  despite the fact that Harris followers had higher average hashtags per repost, as shown in Section \ref{frequent_itemset_mining}, the Harris co-occurrence network has lower density. 
 
-\begin{figure}[t]
-\begin{adjustwidth}{-2cm}{-2cm}
-    \begin{minipage}{\linewidth}
-        \centering
-        \includegraphics[width=0.7\linewidth]{viz/network_t_test.png}
-        \captionsetup{width=0.9\linewidth, justification=centering} 
-        \captionof{figure}{* $p < 0.5$, ** $p < 0.01$, *** $p < 0.001$}
-        \label{network_t_test}
-    \end{minipage}
-\end{adjustwidth}
-\end{figure}
+Figure \ref{network_stats} demonstrates that the Trump co-occurrence network, alongside being denser, has a higher average degree and higher average betweenness than the Harris co-occurrence network. This suggests that the semantic communities in the Trump co-occurrence network are more centrally concentrated and overlapping than those found in the Harris co-occurrence network.
 
-Figure \ref{network_t_test} demonstrates that the Trump co-occurrence network, alongside being denser, has a higher average degree and higher average betweenness than the Harris co-occurrence network. This suggests that the semantic communities in the Trump co-occurrence network are more centrally concentrated and overlapping than those found in the Harris co-occurrence network.
+As shown in Section \ref{frequent_itemset_mining}, engagement hacking hashtags appear frequently in both Harris and Trump follower reposts, and this is corroborated by the high centrality measures of engagement hacking hashtags in the co-occurrence networks. Notice in Figure \ref{high_centrality_nodes} that several of the high betweenness hashtags for both the Harris and Trump co-occurrence networks are not engagement hacking hashtags, but instead refer to substantively informative topics. One might conceptualize these substantive high betweenness hashtags as common and far-reaching topics that bridge disparate semantic communities. For the Trump co-occurrence network, those hashtags are '\#christmas', '\#history', and '\#sharinganeyes'.\footnote{The phrase "sharingan eyes" is a pop culture reference that originates from the Japanese manga and anime series \textit{Naruto}.} In the Harris co-occurrence network, these semantic bridges are '\#art' and '\#funny'.
+
+While the two co-occurrence networks share similar average clustering coefficients and degree assortativity coefficient, the higher lift and confidence distribution for the Harris frequent itemsets in combination with a higher average node degree in the Trump co-occurrence network can provide an idea. These measures are consistent with Harris followers having more distinct, non-overlapping semantic communities and Trump followers having less distinct, overlapping semantic communities.
 
 \begin{figure}[t]
 \begin{adjustwidth}{-2cm}{-2cm}
@@ -346,6 +339,18 @@ Figure \ref{network_t_test} demonstrates that the Trump co-occurrence network, a
         \captionsetup{width=0.9\linewidth, justification=centering} 
         \captionof{figure}{Cumulative density graph for normalized node degree distributions of Harris and Trump co-occurrence networks.}
         \label{degree_density}
+    \end{minipage}
+\end{adjustwidth}
+\end{figure}
+
+\begin{figure}[t]
+\begin{adjustwidth}{-2cm}{-2cm}
+    \begin{minipage}{\linewidth}
+        \centering
+        \includegraphics[height=0.4\textheight]{viz/kamala_high_centrality.png}\includegraphics[height=0.4\textheight]{viz/trump_high_centrality.png}
+        \captionsetup{width=0.9\linewidth, justification=centering} 
+        \captionof{figure}{Hashtags with high centrality in the Harris and Trump co-occurrence networks displayed on the left and right, respectively.}
+        \label{high_centrality_nodes}
     \end{minipage}
 \end{adjustwidth}
 \end{figure}
