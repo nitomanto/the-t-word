@@ -358,8 +358,50 @@ While the two co-occurrence networks share similar average clustering coefficien
 \subsection{BERTopic Bootstrap Models}
 
 
+\begin{figure}[h]
+\begin{adjustwidth}{-2cm}{-2cm}
+    \begin{minipage}{\linewidth}
+        \centering
+        \includegraphics[width=0.5\linewidth]{viz/num_topics_dist.png}
+        \includegraphics[width=0.5\linewidth]{viz/silhouette_score_dist.png}
+        \includegraphics[width=0.5\linewidth]{viz/avg_cosine_similarity_dist.png}
+        \captionsetup{width=0.9\linewidth, justification=centering} 
+        \captionof{figure}{Distributions of various topic model measures across the 50 bootstrapped model iterations. Note that in BERTopic, topics are represented as vectors of \textit{n} dimension, where \textit{n} is the number of resulting dimensions from the dimension reduction model.}
+        \label{bertopic_dists}
+    \end{minipage}
+\end{adjustwidth}
+\end{figure}
 
 \section{Discussion}
+
+\subsection{Structure and Relation}
+
+1) evidence that Trump has a more centralized and overlapping semantic landscape, and subsequently, Harris having a more concretized, distinct overlapping
+2) consistency with previous literature
+
+\subsection{Content Themes and Culture}
+
+discuss some overarching themes:
+
+gender and sexuality
+sports and video games
+music
+
+distinguish between Harris having higher number of distinct, non-overlapping communities and Harris potentially having a more diverse semantic spread -- they're not the same thing! Trump and Harris corpora can be equally diverse in terms of the span of topics but may have different structural relations and distributions
+
+with that being said, do examine semantic diversity, tell them what you find
+
+\subsection{Culture Moderated by User Behaviors}
+
+caveats in the data
+1) trump users repost less; why?
+2) billie eilish dominates; why?
+3) non-representativeness and unknowable missingness
+
+explain how this impacts the interpretation of the results
+
+insofar as one accepts the results, explain what application or implication this knowledge has. is one group more susceptible to affective polarization? does rallying behind a candidate become more or less doable with the community strucutre?
+
 
 \section{Conclusion}
 
