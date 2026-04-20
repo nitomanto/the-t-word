@@ -72,7 +72,7 @@
 \newcommand{\graddate}{June 2026}
 \newcommand{\facultyadvisor}{Dr. David Peterson}
 \newcommand{\preceptor}{Dr. Henry Dambanemuya}
-\newcommand{\keywords}{Key1; Key2; Key3...}
+\newcommand{\keywords}{social media, TikTok, politics, election, culture, social network analysis, frequent itemset mining, association rule mining, topic modeling}
 
 %% Set PDF metadata
 \hypersetup{
@@ -129,6 +129,8 @@ I would like to thank Dr. David Peterson, Dr. Jun Sun, and Peter Zhang, M.A., fo
 
 \section*{Abstract}
 
+My abstract goes here.
+
 \bigskip
 \noindent\textbf{Keywords:} \keywords
 
@@ -139,7 +141,7 @@ On June 7th, 2024, electric pop music artist Charli XCX released her hit album B
 
 RQ 1: Of the TikTok users who followed official TikTok campaign accounts, what are the topics of those users’ reposted TikTok posts as represented by each post's hashtags and caption information?
 
-RQ 2: Of the TikTok users who followed official TikTok campaign accounts, what are the bipartite network structures of co-occurring hashtags in the TikTok posts that were reposted by those followers, and how do they compare with each other?
+RQ 2: Of the TikTok users who followed official TikTok campaign accounts, what are the network structures of co-occurring hashtags in the TikTok posts that were reposted by those followers, and how do they compare with each other?
 
 
 \section{Literature Review}
@@ -148,8 +150,8 @@ RQ 2: Of the TikTok users who followed official TikTok campaign accounts, what a
 
 It is well documented in previous literature that political attitudes and preferences permeate deeply and widely into individual's social lives and identities. Politicultural sorting, or the fragmentation of American cultures along political affiliation, is demonstrated in one study that uses National Consumer Survey data to show liberal and conservative ideology each encompass multiple cultural archetypes \parencite{rogers_politicultural_2022}. Another study finds that liberals and conservatives from the same college campus spend their time differently in small but robust ways, physically occupying separate geographic spaces \parencite{talaifar_lifestyle_2025}. This effect was more strongly observed for individuals' leisure time; furthermore, there is a difference in the way that Democrats and Republicans perceive content on social media platforms \parencite{talaifar_lifestyle_2025} \parencite{mcclain_how_2024}.  Not only is this cultural and behavioral partisanship exhibited by individuals, but individuals can also recognize this partisanship in others. Studies have shown that individuals can correctly identify others' political affiliations using non-political cues and information, such as one's preferences in music or clothing \parencite{deichert_partisan_2019} \parencite{lee_how_2021}. Perhaps more importantly, individuals use these inferences on political affiliation to decide whom to interact with, which can further encourage in-group interaction and cause more cleavage between parties \parencite{deichert_partisan_2019} \parencite{lee_how_2021}. 
 
-The politicultural divide extends to social media preferences and behaviors as well. One study shows that political polarization extends to brand-preference polarization on Twitter following the 2016 and 2020 Presidential election \parencite{schoenmueller_frontiers_2023}. Individuals who engage in partisan spheres on social media exhibit different patterns of interaction compared to non-partisans \parencite{mamakos_social_2023}; user behavior on social media also varies by party, even when the topic at hand is not inherently related to politics \parencite{pendse_role_2025} \parencite{essig_partisan_2024}. Opinions and perception of social media platforms vary by party, TikTok included \parencite{mcclain_how_2024}. 
-This difference in culture and behaviors along partisan lines, on social media and otherwise, along with partisan differences in perceptions of TikTok, suggest that TikTok usage is likely to vary by political preference.  With recent shifts in American political landscape, such as the increased influence of far-right politics and affective polarization \parencite{brown_far_2023}\parencite{polacko_rightward_2022}, it is likely that this politicultural divide is also shifting. TikTok may be a platform with unique insight to analyze this shift, given its recent popularity and increased political relevance with American youth \parencite{mcclain_how_2024}. However, literature surrounding TikTok is currently sparse, and more disconcertingly, easily outdated, due to the temporal and rapidly-evolving structure of the platform.
+The politicultural divide extends to social media preferences and behaviors as well. One study shows that political polarization extends to brand-preference polarization on Twitter following the 2016 and 2020 Presidential election \parencite{schoenmueller_frontiers_2023}. Individuals who engage in partisan spheres on social media exhibit different patterns of interaction compared to non-partisans \parencite{mamakos_social_2023}; user behavior on social media also varies by party, even when the topic at hand is not inherently related to politics \parencite{pendse_role_2025} \parencite{essig_partisan_2024}. Opinions and perception of social media platforms vary by party, TikTok included \parencite{mcclain_how_2024}. Political activists and elites have grown their presence and messaging on TikTok, establishing the app as a platform of relevance in ongoing and future movements and elections \parencite{moir_use_2023} \parencite{abbas_tiktok_2022} \parencite{cervi_playful_2023}.
+This difference in culture and behaviors along partisan lines, on social media and otherwise, along with partisan differences in perceptions of TikTok, suggest that TikTok usage is likely to vary by political preference.  With recent shifts in the American political landscape, such as the increased influence of far-right politics and affective polarization \parencite{brown_far_2023} \parencite{polacko_rightward_2022}, it is likely that this politicultural divide is also shifting. TikTok may be a platform with unique insight to analyze this shift, given its recent popularity and increased political relevance with American youth \parencite{mcclain_how_2024}. However, literature surrounding TikTok is currently sparse, and more disconcertingly, easily outdated, due to the temporal and rapidly-evolving structure of the platform.
 
 \subsection{TikTok and Its Eccentricities}
 
@@ -159,9 +161,9 @@ With this clear emphasis on rapidly evolving slang and equally temporal trends, 
 
 \subsection{The Gap In Literature}
 
-Past scholarship has utilized these unique structures of communication on TikTok to examine interactions not found on other social media platforms. Its growing popularity has also enabled scale-up of research studies that would not have been possible just years prior. For example, Medina Serrano et al. \parencite*{medina_serrano_dancing_2020} use a web crawler to collect videos, which are then analyzed using Microsoft’s Azure Face API. Another group of researchers trains a neural network to classify TikTok videos filmed in second person view and non-second person points of view in order to compare engagement differences between the two types of videos \cite{cheng_like_2024} . Other computational researchers take advantage of TikTok’s Research Tools API, including one such group of researchers who analyzed political discourse surrounding the 2024 election prior to former President Joe Biden’s withdrawal \parencite{pinto_tracking_2024}. Another study makes use of Amazon’s Mechanical Turk to administer a large-scale survey, highlighting another computational method that deviates from what otherwise has been a predominantly qualitative body of work about TikTok \parencite{karimi_scrolling_2023} \parencite{hindarto_tiktok_2022} \parencite{kanthawala_its_2022}.
+Past scholarship has utilized these unique structures of communication on TikTok to examine interactions not found on other social media platforms. Its growing popularity has also enabled scale-up of research studies that would not have been possible just years prior. For example, Medina Serrano et al. \parencite*{medina_serrano_dancing_2020} used a web crawler to collect videos, which were then analyzed using Microsoft’s Azure Face API. Another group of researchers trained a neural network to classify TikTok videos filmed in second person view and non-second person points of view in order to compare engagement differences between the two types of videos \cite{cheng_like_2024} . Other computational researchers took advantage of TikTok’s Research Tools API, including one such group of researchers who analyzed political discourse surrounding the 2024 election prior to former President Joe Biden’s withdrawal \parencite{pinto_tracking_2024}. Another study made use of Amazon’s Mechanical Turk to administer a large-scale survey, highlighting another computational method that deviates from what otherwise has been a predominantly qualitative body of research on TikTok \parencite{karimi_scrolling_2023} \parencite{hindarto_tiktok_2022} \parencite{kanthawala_its_2022}.
 
-My research project is aimed at filling the gap between the study of politics on TikTok and politics in relation to other facets of social life. Shi et al. \parencite*{shi_millions_2017} conducted a conceptually similar study by analyzing the relationship between political affiliation and interest in science through Amazon book purchase history, connecting political affiliation to other aspects of individual identity. We have ample literature on the structure of the platform, the rhetorical and linguistic strategies employed in political communication, and of TikTok’s unique relationship with youth; what remains unknown is how the bi-partite cultural networks of TikTok users differ in their structure and contents. In my next section, I will take advantage of TikTok’s platform structure in building a dataset to examine this very question.
+My research project is aimed at filling the gap between the study of politics on TikTok and politics in relation to other facets of social life. This thesis aims to strike at the intersection of the ongoing shifts in politics, culture, and entertainment on TikTok, which is of emerging salience. I will additionally make use of computational methods for data collection and analysis, which is an underexplored and undersaturated area in researching TikTok. Other scholars have laid groundwork in similar methods for different domains; Shi et al. \parencite*{shi_millions_2017} conducted a conceptually similar study by analyzing the relationship between political affiliation and interest in science through Amazon book purchase history, connecting political affiliation to other aspects of individual identity. We have ample literature on the structure of the platform, the rhetorical and linguistic strategies employed in political communication, and of TikTok’s unique relationship with youth; what remains unknown is how the bi-partite cultural networks of TikTok users differ in their structure and contents. In my next section, I will take advantage of TikTok’s platform structure in building a dataset to examine this very question.
 
 \section{Data and Methods}
 
@@ -205,14 +207,13 @@ After constructing the dataset of campaign account public followers, I scraped t
 
 \subsection{Methods}
 
-Using this dataset, I perform three different methods of analysis. The first two methods focus on substantive analysis of TikTok videos, whereas the third method is focused on a structural analysis. The first method I use is itemset mining, drawing inspiration again from Shi et al. \parencite*{shi_millions_2017}, where researchers take advantage of Amazon's suggested co-purchase itemsets regarding online book sales. Itemset mining, or association rule mining, is suited to analyzing frequently co-occurring items. Due to the large scale of my dataset, I use a Frequent Pattern Growth (FP-Growth) algorithm as designed by Han et al. \parencite*{han_mining_2000} to reduce computational costs. I apply FP-Growth itemset mining to the TikTok videos reposted by the followers of @kamalahq and @teamtrump by analyzing each video as a set of co-occurring hashtags. One benefit of itemset mining is that it is directional and therefore distinguishes between symmetrically and asymmetrically implicative relationships amongst items in a set. For example, the frequent itemset [\#billieeilish $\rightarrow$ \#edit] demonstrates that in posts where \#billieeilish is tagged, \#edit is also frequently tagged, but it does not imply that \#billieeilish is frequently tagged in posts containing \#edit. 
+Using this dataset, I perform three different methods of analysis. The first two methods focus on substantive analysis of TikTok videos, whereas the third method is focused on a structural analysis. The first method I use is itemset mining, drawing inspiration again from Shi et al. \parencite*{shi_millions_2017}, where researchers take advantage of Amazon's suggested co-purchase itemsets regarding online book sales. Itemset mining, or association rule mining, is suited to analyzing frequently co-occurring items. Due to the large scale of my dataset, I use a Frequent Pattern Growth (FP-Growth) algorithm as designed by Han et al. \parencite*{han_mining_2000} to reduce computational costs. I apply FP-Growth itemset mining to the TikTok videos reposted by the followers of @kamalahq and @teamtrump by analyzing each video as a set of co-occurring hashtags. One benefit of itemset mining is that it is directional and therefore distinguishes between symmetrically and asymmetrically implicative relationships amongst items in a set. For example, the frequent itemset [\#billieeilish $\rightarrow$ \#edit] demonstrates that in posts where \#billieeilish is tagged, \#edit is also frequently tagged, but it does not imply that \#billieeilish is frequently tagged in posts containing \#edit. In this regard, association rules not only produce macro-level insights on the general pattern of hashtag associations, but also allow micro-level substantive analysis by contextualizing hashtags within association rules.
 
 %The first layer concerns the official presidential campaign TikTok posts themselves. I will conduct sentiment and topic analysis on this core corpus of videos; each TikTok post will constitute a document in the corpus, and each document will consist of the caption text and the auto-transcript text appended together. From here, I will use apply RoBERTa to the corpus to determine the primary sentiments in these TikTok posts for each candidate. Additionally, I will use BERTopic to cluster and define topics within each candidate’s posts to examine the primary subject matters of the campaign effort. Upon a precursory glance at these campaign TikTok videos, it seems that there are two broad categories in campaign strategy: promoting oneself and one’s policies as the ideal candidate for America, or drawing attention to perceived flaws and deficiencies in the opponent’s campaign. Understanding the sentiment and topic distributions in candidates' campaigns will give a quantitative representation of each candidate's campaign strategy. Though this is not a direct representation of the types of content that campaign account followers are interested in, it can give insight as to what the campaign managers perceive to be the interests and cultural knowledge of the follower base.
- For my second method of analysis I will construct a hashtag co-occurrence network to see how ideas within these partisan spaces relate to each other. In this weighted network, each node represents a hashtag, and each edge between two hashtags represents the number of times the two hashtags co-occur in a TikTok repost. For an example, refer to Figure \ref{cohash_ex}. Using network analysis measures such as clustering coefficient, diameter, average shortest path, I compare the two networks to each other in shape and size. I also examine nodes of interest and prestige using centrality measures such as closeness centrality, betweenness centrality, and eigenvector centrality to identify hashtags that may be indicative or representative of popular topics. The mixture of network-level measures and hashtag-level measures gives both structural and substantive understanding of the corpus and helps to connect the semantic meanings of hashtags themselves to their relative positions in the network. 
+ For my second method of analysis I construct a hashtag co-occurrence network to see how ideas within these partisan spaces relate to each other. In this weighted network, each node represents a unique hashtag, and each edge between two hashtags represents the number of times the two hashtags co-occur in the TikTok reposts. For an example, refer to Figure \ref{cohash_ex}. Using network-level analysis measures, I compare the two networks to each other. Measures such as density, clustering coefficient, and degree assortativity will reveal insight into the shape of the networks; measures such as diameter, number of nodes, and number of edges will provide a basis of comparison on size. I also examine nodes of interest and prestige using degree centrality, betweenness centrality, and pagerank centrality to identify hashtags that may be indicative or representative of popular topics. The mixture of network-level measures and hashtag-level measures gives both structural and substantive understanding of the corpus and helps to connect the semantic meanings of hashtags themselves to their relative positions in the network. 
 
-Finally, for my third method of analysis, I turn towards interpreting the contents of TikTok posts that were reposted by followers of @kamalahq and @teamtrump. Using the video description text of TikTok reposts as documents, I fit a mixed deep-learning and unsupervised learning BERTopic clustering pipeline for each candidate's followers' text \parencite{grootendorst_bertopic_2022}. However, it would be too computationally expensive to fit the topic model on the entirety of the text. Instead, I perform a grid search over bootstrap samples and compare each iteration's out-of-sample silhouette score, pair-wise topic cosine similarity, and number of topics. I select the iteration with the highest silhouette score that contains between 15 and 30 topics to qualitatively interpret the contents of the corpus. Using the distributions of silhouette scores and pair-wise topic cosine similarity, I compare the two follower bases' discursive structure. By examining the resulting topic clusters, I can infer intra-topic and inter-topic heterogeneity and the relative distances between topic clusters. I evaluate the quality of topics by using silhouette score, which broadly measures the distance of documents to their own topic's centroid against the distance to centroids of other topics. I further examine the distribution of topics by comparing average pair-wise topic cosine similarity in a statistical test, which will give insight to the spread and diversity of topics. 
+Finally, for my third method of analysis, I turn towards interpreting the contents of TikTok posts that were reposted by followers of @kamalahq and @teamtrump. Using the video description text of TikTok reposts as documents, I fit a mixed deep-learning and unsupervised learning BERTopic clustering pipeline for each candidate's followers' text \parencite{grootendorst_bertopic_2022}. However, it would be too computationally expensive to fit the topic model on the entirety of the text. Instead, I perform a grid search over bootstrap samples and compare each iteration's out-of-bootstrap-sample silhouette score, pair-wise topic cosine similarity, and number of topics. I select the iteration with the highest silhouette score that contains between 15 and 30 topics to qualitatively interpret the contents of the corpus. Using the distributions of silhouette scores and pair-wise topic cosine similarity, I compare the two follower bases' discursive structure. By examining the resulting topic clusters, I can infer intra-topic and inter-topic heterogeneity and the relative distances between topic clusters. I evaluate the quality of topics by using silhouette score, which broadly measures the distance of documents to their own topic's centroid against the distance to centroids of other topics. I further examine the distribution of topics by comparing average pair-wise topic cosine similarity in a statistical test, which will give insight to the spread and diversity of topics. 
 %be the co-following network of public account users who also follow official campaign TikTok accounts. For each public follower of an official campaign account, I will gather all a list of all accounts that the user follows. This data allows me to graph a co-following network between followers of Harris's campaign and followers of Trump's campaign. From here, I will analyze measures of betweenness and centrality for each campaign pool separately and in conjunction. This analysis will also reveal which public accounts are more likely to be followed by Trump followers and which are more likely to be followed by Harris supporters, which lends itself to more granular investigation of that page's content.
-
 
 These analyses all help to fill out the substantive and structural landscape of the politicultural divide on TikTok. While itemset mining can identify crucial hashtag tokens and relationships, network analysis can provide insight into larger community structure. Finally, topic modeling provides a corpus-level substantive summary of the corpus contents. Using combined methods create a comprehensive picture of the politicultural landscape by providing insight to different facets of socialization: the stuffing, the scaffolding, and the sinew.
 %I will examine the profiles of users who follow official campaign TikTok accounts. From the profiles of public user accounts, I will collect the TikTok post information of all reposted TikTok videos within the valid time frame defined earlier. This information would include the timestamp, caption text, hashtags, and music. In my last layer of analysis, I will again conduct topic analysis using BERTopic to cluster TikTok reposts, defining once again each document as the caption text appended to the auto-transcript text. Using this analysis, I can begin to explore how reposted TikTok videos differ between the two different political bases. From this hashtag data, I can also create a co-hashtag network to see which hashtags are more likely to be reposted by Harris followers and which are more likely to be reposted by Trump followers.
@@ -230,35 +231,41 @@ These analyses all help to fill out the substantive and structural landscape of 
 
 \subsection{Concerns and Critiques}
 
-The biggest weakness of this analysis is the non-random and non-representative data. The follower dataset that I gathered is not a random sample of all of the followers of @kamalahq and @teamtrump. Furthermore, the followers collected are recent followers, meaning they followed the campaign accounts roughly a year after the end of the election. This may confound some of the results and reduce generalizability. %My biggest concern as of now is that my proposed dataset is contingent upon the functionality of the TikTok Research API, and the access to the API is not guaranteed. If I were to be denied access to the API, then I would have two other options for data collection.
+The biggest weakness of this analysis is the non-random and non-representative data. The follower dataset that I gathered is not a random sample of all of the followers of @kamalahq and @teamtrump. Furthermore, the followers collected are recent followers, meaning they followed the campaign accounts roughly a year after the end of the election. This may confound some of the results and reduce generalizability, as there may be underlying systematic bias in either the missingness or the range of data collected itself. For example, if the follower groups of @kamalahq and @teamtrump are growing at different rates,\footnote{This is probable, seeing as at the time of writing, @kamalahq has 5.5 million followers while @teamtrump has 13.6 million followers.} we might interpret the gathered followers of the faster growing candidate to be more recently followed, and perhaps also newer, accounts, which may explain a sparser or shorter reposting history. Due to the opacity of the TikTok Research API tools, it is further difficult to differentiate between types of missingness or to identify missingness at all; this imagined hole is of unknown shape, size, and dimension. As such, the results of this study are exploratory, and should be interpreted as a guide or proof-of-concept for further research in this subject area. %My biggest concern as of now is that my proposed dataset is contingent upon the functionality of the TikTok Research API, and the access to the API is not guaranteed. If I were to be denied access to the API, then I would have two other options for data collection.
 
-There is also the theoretical concern of how politics and political attitudes are framed. Insofar as the Democratic Party espouses liberal politics and the Republican Party is considered conservative, we might also extend these labels to the users who follow the accounts of the party leaders with little doubt; however, that would be an oversight of the shifting political spectrum of American politics. Affective polarization has consolidated partisan division for both the public and for elites \parencite{iyengar_origins_2019} \parencite{flamino_political_2023}, but public opinion itself can be cued by party policies \parencite{yeung_self-reported_2025}.  Thus, the true relationship between an individual's ideology and party identity is difficult to assess, and furthermore neither extractable from my data nor relevant to the research question. For the purposes of this thesis, I reduce political attitudes to partisanship, wherever these parties may fall on a political spectrum. I will not attempt to dissect the ideologies of these parties and relate them to any findings about behavior on TikTok; I will make no claims of the liberalism or conservatism, left wing or right wing ideologies of the two major political parties in the U.S., but rather allow parties to exist as their own entity and observe them as a generative collective with their own cultures and interests.
+There is also the theoretical concern of how politics and political attitudes are framed. Insofar as the Democratic Party espouses liberal politics and the Republican Party is considered conservative, we might also extend these labels to the users who follow the accounts of the party leaders with little doubt; however, that would be an oversight of the shifting political spectrum of American politics. Affective polarization has consolidated partisan division for both the public and for elites \parencite{iyengar_origins_2019} \parencite{flamino_political_2023}, but public opinion itself can be cued by party policy attitudes \parencite{yeung_self-reported_2025}.  Thus, the true relationship between an individual's ideology and party identity is difficult to assess, and furthermore neither extractable from my data nor relevant to the research question. While I draw upon literature that examines ideology, for the purposes of this thesis, I reduce political attitudes to partisanship, wherever these parties may fall on a political spectrum. I will not attempt to dissect the ideologies of these parties and relate them to any findings about behavior on TikTok; I will make no claims of the liberalism or conservatism, left wing or right wing ideologies of the two major political parties in the U.S., but rather allow parties to exist as their own entity and observe them as a generative collective with their own cultures and interests.
 
-Finally, there is the issue of interpreting a user following a campaign TikTok account as support or preference for the candidate's party. There is the possibility that pruning users that follow both candidates' accounts will actually remove the users who are most politically engaged and therefore most strongly hold their political attitudes, which may or may not be aligned with a political party. It also not completely certain that individuals who only follow one of the two major party candidates support that party and that candidate. Short of combing through all of the followers' profiles, following is a more consistent behavioral heuristic compared to commenting, liking, and reposting. The latter options are sporadic behaviors that need to be evaluated in their volume and frequency; with commenting, the textual data would need to be analyzed, which can be difficult with brief comments or comments that reference pop culture. By drawing upon the pool of followers, we can create a well-defined sample that isn't subject to inconsistent behavior.
+Finally, there is the issue of interpreting a user following a campaign TikTok account as support or preference for the candidate's party. It is not certain that individuals who only follow one of the two major party candidates support that party and that candidate. Short of combing through all of the followers' profiles, following is a more consistent behavioral heuristic compared to commenting, liking, and reposting. The latter options are sporadic behaviors that need to be evaluated in their volume and frequency; with commenting, the textual data would need to be analyzed, which can be difficult with brief comments or comments that reference pop culture. By drawing upon the pool of followers, I can create a well-defined sample that is not prone to inconsistent behavior.
 
 \section{Results}
 
 \subsection{Frequent Itemset Mining}
 \label{frequent_itemset_mining}
-\begin{figure}[h]
-\begin{adjustwidth}{-2cm}{-2cm} % Adjust margins: left and right
-    \begin{minipage}{\linewidth}
-        \centering
-        \includegraphics[width=0.4\linewidth]{viz/great_table_itemset_stats.png}
-        \captionsetup{width=0.9\linewidth, justification=centering} 
-        \captionof{figure}{Descriptive statistics of the hashtag corpus used for frequent itemset mining. In this table, the word "set" refers to one TikTok post containing any number of hashtags. Note that there are nearly three times as many reposts from Harris followers compared to reposts from Trump followers.}
-        \label{great_table_itemset_stats}
-    \end{minipage}
-\end{adjustwidth}
-\end{figure}
 
-Upon first glance, it appears that Harris’s followers have a richer and larger corpus of TikTok repost hashtags. Figure \ref{great_table_itemset_stats} shows preliminary hashtag overview. Despite there being fewer Harris followers in the dataset, there are roughly three times as many TikTok videos reposted by the Harris followers compared to Trump followers. The Harris follower corpus additionally has more than twice as many unique hashtag tokens compared to the Trump follower corpus, and each repost on average contains more hashtags. Harris followers repost and thereby endorse TikTok content more frequently, and the content they repost are also richer in hashtags. 
+\begin{table}[!htbp]
+    \centering
+    \begin{tblr}{
+        %cell{4}{2} = {c=5}{c},
+        vline{2} = {-}{},
+        hline{2} = {-}{},
+        }
+        Metric       & Harris       & Trump \\
+        Total Reposts            & 1,298,363                & 402,861  \\
+        Total Hashtags         & 6,259,496                 & 1,870,552 \\
+        Unique Hashtags          & 468,933              & 227,749 \\
+        Average Hashtags per Repost      &4.82          &4.64
+    \end{tblr}
+    \captionsetup{justification=centering}
+    \caption{Descriptive statistics of the hashtag corpus used for frequent itemset mining. Note that there are nearly three times as many reposts from Harris followers compared to reposts from Trump followers.}
+    \label{itemset_stats}
+\end{table}
+
+Upon first glance, it appears that Harris’s followers have a richer and larger corpus of TikTok repost hashtags. Table \ref{itemset_stats} shows a preliminary hashtag overview. Despite there being fewer Harris followers in the dataset, there are roughly three times as many TikTok videos reposted by the Harris followers compared to Trump followers. The Harris follower corpus additionally has more than twice as many unique hashtag tokens compared to the Trump follower corpus, and each repost on average contains more hashtags. Harris followers repost and thereby endorse TikTok content more frequently, and the content they repost are also richer in hashtags. 
 
 There are several measures to consider when evaluating the validity and insightfulness of association rules. The first is confidence, which is defined as:
 
 \begin{center}$conf(I \rightarrow j)= P( j | I ) =  \frac{P(I,j)}{P(I)}   =  support(I \cap j)/support(I)$
 \end{center}
-
 which measures the extent to which the antecedent item, $I$, implies the consequent item, $j$. If the confidence of the association rule [\#billieeilish $\rightarrow$ \#edit] is 0.80, then 80\% of all posts containing \#billieeilish also contain \#edit. This is a general measure of how strongly associated these two items are. Another measure to consider is lift, which is defined as follows:
 \begin{center}
 $lift(I \rightarrow j) =  \frac{conf(I \rightarrow j)}{(P(j)}$
@@ -294,7 +301,7 @@ The patterns found in high confidence association rules in Trump hashtags are no
 
 Notice also in Figure \ref{hashtag_support} that '\#fyp' is actually tagged at a higher frequency in Harris follower reposts than in Trump follower reposts; despite '\#fyp' having higher overall support in the Harris corpus, the frequent itemsets containing '\#fyp' have a tighter association in the Trump corpus. Other notable hashtags in the figure show which hashtags, while not occurring in the association rules, are more associated with which party. For example, '\#cars', '\#fortnite',\footnote{Fortnite is a popular video game} and '\#football' occur more frequently in Trump follower reposts, whereas '\#strangerthings',\footnote{\textit{Stranger Things} is a popular horror fiction television series set in the 1980s.} '\#kpop', and '\#wlw'\footnote{"WLW" is a common acronym for "women loving women."} occur more frequently in Harris follower reposts.
 
-However, turning to Figure \ref{confidence_lift}, we see that the distribution of both confidence and lift of mined association rules is higher for Harris follower reposts than Trump follower reposts. The higher overall confidence suggests that the associations are more prevalent, while the higher overall lift connotes a unique association between consequent and antecedent. The implication is that on the whole, Harris followers have stronger and more consolidated association rules.
+However, turning to Figure \ref{confidence_lift}, we see that the distribution of both confidence and lift of mined association rules is higher for Harris follower reposts than Trump follower reposts. The higher overall confidence suggests that the associations are more prevalent, while the higher overall lift connotes a unique association between consequent and antecedent. The implication is that on the whole, Harris followers have stronger and more consolidated association rules. This suggests that Harris followers may have more well-defined semantic and cultural communities than Trump followers, specifically regarding demarcation and separation of hashtag associations.
 
 \begin{figure}[h]
 \begin{adjustwidth}{-2cm}{-2cm}
@@ -302,7 +309,7 @@ However, turning to Figure \ref{confidence_lift}, we see that the distribution o
         \centering
         \includegraphics[width=0.5\linewidth]{viz/rule_confidence_dist.png}\includegraphics[width=0.5\linewidth]{viz/rule_lift_dist.png}
         \captionsetup{width=0.9\linewidth, justification=centering} 
-        \captionof{figure}{Boxplots demonstrating the distribution of association rule confidence and association rule lift on the left and right, respectively.}
+        \captionof{figure}{Boxplots displaying the distribution of association rule confidence and association rule lift on the left and right, respectively.}
         \label{confidence_lift}
     \end{minipage}
 \end{adjustwidth}
@@ -310,6 +317,7 @@ However, turning to Figure \ref{confidence_lift}, we see that the distribution o
 
 \subsection{Hashtag Co-Occurrence Network Analysis}
 
+\begin{comment}
 \begin{figure}[h]
 \begin{adjustwidth}{-2cm}{-2cm}
     \begin{minipage}{\linewidth}
@@ -317,15 +325,56 @@ However, turning to Figure \ref{confidence_lift}, we see that the distribution o
         \includegraphics[width=0.5\linewidth]{viz/gt_network_stats.png}
         \includegraphics[width=0.7\linewidth]{viz/network_t_test.png}
         \captionsetup{width=0.9\linewidth, justification=centering} 
-        \captionof{figure}{Network level descriptive statistics for the Harris and Trump hashtag co-occurrence social networks. Average Clustering Coefficient and Diameter are approximated with built-in networkx approximation algorithms, and the numbers shown here is an lower bound for the true value. Note that edges are weighted by the number of co-occurrences for any two hashtags. One TikTok repost equates to one co-occurrence. [I'll reformat the table and add my p values soon]}
+        \captionof{figure}{Network level descriptive statistics for the Harris and Trump hashtag co-occurrence social networks. Average Clustering Coefficient and Diameter are approximated with built-in networkx approximation algorithms, and the numbers shown here is a lower bound for the true value. Note that edges are weighted by the number of co-occurrences for any two hashtags. One TikTok repost equates to one co-occurrence. [I'll reformat the table and add my p values soon]}
         \label{network_stats}
     \end{minipage}
 \end{adjustwidth}
 \end{figure}
+\end{comment}
 
-Pivoting now to the hashtag co-occurrence networks, we begin to find high-level structural patterns in the semantic discourse. A glance at Figure \ref{network_stats} shows that the the Harris network is larger, both in terms of nodes and edges as well as the diameter of the maximal component. This is in line with expectations, as there are more Harris follower reposts than Trump follower reposts. Interestingly,  despite the fact that Harris followers had higher average hashtags per repost, as shown in Section \ref{frequent_itemset_mining}, the Harris co-occurrence network has lower density. 
+\begin{table}[h]
+    \centering
+    \begin{tblr}{
+        %cell{4}{2} = {c=5}{c},
+        %vline{2} = {-}{},
+        %hline{3} = {-}{},
+        hline{2} = {-}{},
+        hline{8} = {-}{},}
+        Metric       & Harris       & Trump \\
+        Number of Nodes            & 487,200                & 246,620  \\
+        Number of Edges         & 10,575,216                & 4,339,290 \\
+        Density          & $8.9106e-05$              & $1.4269e-04$ \\
+        Avg. Clustering Coefficient      &0.8444          &0.8453 \\
+        Degree Assortativity & -0.0368  &-0.0388 \\
+        Diameter (Maximal Component) &11 &9
+    \end{tblr}
+    \label{network_stats}
+    \captionsetup{justification=centering}
+    \caption{Network-level descriptive statistics for the Harris and Trump hashtag co-occurrence social networks. Average Clustering Coefficient and Diameter are approximated with built-in networkx approximation algorithms, and the numbers shown here is a lower bound for the true value. Note that edges are weighted by the number of co-occurrences for any two hashtags.}
+\end{table}
 
-Figure \ref{network_stats} demonstrates that the Trump co-occurrence network, alongside being denser, has a higher average degree and higher average betweenness than the Harris co-occurrence network. This suggests that the semantic communities in the Trump co-occurrence network are more centrally concentrated and overlapping than those found in the Harris co-occurrence network.
+\begin{table}[h]    
+    \begin{tblr}{
+        %cell{4}{2} = {c=5}{c},
+        %vline{2} = {-}{},
+        cell{5}{1} = {c=6}{c},
+        hline{5} = {-}{},
+        hline{2} = {-}{},
+        }
+        Metric       & Harris Mean   & Harris SD  & Trump Mean   & Trump SD & t-statistic \\
+        Node Degree   & $8.91e-05$   & $1.21e-03$   & $1.43e-04$    & $1.48e-03$ & $-15.57$***  \\
+        Node Betweenness & $3.38e-06$ & $5.42e-04$ & $6.93e-06$ & $8.06e-04$ & $-1.972$* \\
+        Node Pagerank & $2.05e-06$ & $7.40e-05$ & $4.05e-06$ & $9.60e-05$  & $-9.082$*** \\
+        ~ *$p < 0.05$  **$p < 0.01$  ***$p < 0.001$ & & & &
+    \end{tblr}
+    \captionsetup{justification=centering}
+    \caption{Node-level measures comparing the Harris and Trump co-occurrence networks.}
+    \label{network_t_test}
+\end{table}
+
+Pivoting now to the hashtag co-occurrence networks, we begin to find high-level structural patterns in the semantic discourse. A glance at Table \ref{network_stats} shows that the the Harris network is larger, both in terms of nodes and edges as well as the diameter of the maximal component. This is in line with expectations, as there are more Harris follower reposts than Trump follower reposts. Interestingly,  despite the fact that Harris followers had higher average hashtags per repost, as shown in Section \ref{frequent_itemset_mining}, the Harris co-occurrence network has lower density. 
+
+Table \ref{network_t_test} demonstrates that the Trump co-occurrence network, alongside being denser, has a higher average degree and higher average betweenness than the Harris co-occurrence network. This suggests that the semantic communities in the Trump co-occurrence network are more centrally concentrated and overlapping than those found in the Harris co-occurrence network.
 
 As shown in Section \ref{frequent_itemset_mining}, engagement hacking hashtags appear frequently in both Harris and Trump follower reposts, and this is corroborated by the high centrality measures of engagement hacking hashtags in the co-occurrence networks. Notice in Figure \ref{high_centrality_nodes} that several of the high betweenness hashtags for both the Harris and Trump co-occurrence networks are not engagement hacking hashtags, but instead refer to substantively informative topics. One might conceptualize these substantive high betweenness hashtags as common and far-reaching topics that bridge disparate semantic communities. For the Trump co-occurrence network, those hashtags are '\#christmas', '\#history', and '\#sharinganeyes'.\footnote{The phrase "sharingan eyes" is a pop culture reference that originates from the Japanese manga and anime series \textit{Naruto}.} In the Harris co-occurrence network, these semantic bridges are '\#art' and '\#funny'.
 
@@ -343,6 +392,7 @@ While the two co-occurrence networks share similar average clustering coefficien
 \end{adjustwidth}
 \end{figure}
 
+%\begin{comment}
 \begin{figure}[t]
 \begin{adjustwidth}{-2cm}{-2cm}
     \begin{minipage}{\linewidth}
@@ -350,10 +400,35 @@ While the two co-occurrence networks share similar average clustering coefficien
         \includegraphics[height=0.4\textheight]{viz/kamala_high_centrality.png}\includegraphics[height=0.4\textheight]{viz/trump_high_centrality.png}
         \captionsetup{width=0.9\linewidth, justification=centering} 
         \captionof{figure}{Hashtags with high centrality in the Harris and Trump co-occurrence networks displayed on the left and right, respectively.}
-        \label{high_centrality_nodes}
+        %\label{high_centrality_nodes}
     \end{minipage}
 \end{adjustwidth}
 \end{figure}
+%\end{comment}
+
+\begin{table}[h]    
+    \begin{tblr}{
+        cell{1}{1} = {c=6}{c},
+        cell{1}{7} = {c=6}{c},
+        cell{2}{1} = {c=2}{c},
+        cell{2}{3} = {c=2}{c},
+        cell{2}{5} = {c=2}{c},
+        cell{2}{7} = {c=2}{c},
+        cell{2}{9} = {c=2}{c},
+        cell{2}{11} = {c=2}{c},
+        %vline{2} = {-}{},
+        %cell{5}{1} = {c=6}{c},
+        hline{2} = {-}{},
+        hline{3} = {-}{},
+        hline{4} = {-}{},
+        }
+        Harris High Centrality Nodes & & & & & & Trump High Centrality Nodes & & & & & \\
+        
+    \end{tblr}
+    \captionsetup{justification=centering}
+    \caption{Hashtags with high centrality in the Harris and Trump co-occurrence networks displayed on the left and right, respectively.}
+    \label{high_centrality_nodes}
+\end{table}
 
 \subsection{BERTopic Bootstrap Models}
 
@@ -366,8 +441,39 @@ While the two co-occurrence networks share similar average clustering coefficien
         \includegraphics[width=0.5\linewidth]{viz/silhouette_score_dist.png}
         \includegraphics[width=0.5\linewidth]{viz/avg_cosine_similarity_dist.png}
         \captionsetup{width=0.9\linewidth, justification=centering} 
-        \captionof{figure}{Distributions of various topic model measures across the 50 bootstrapped model iterations. Note that in BERTopic, topics are represented as vectors of \textit{n} dimension, where \textit{n} is the number of resulting dimensions from the dimension reduction model.}
+        \captionof{figure}{Distributions of various topic model measures across the 50 bootstrapped model iterations. Note that in BERTopic, topics are represented as vectors of \textit{n} dimension, where \textit{n} is the number of resulting dimensions from the implemented embedding model; in this case,  the transformers embedding model produced 384-dimensional vectors.}
         \label{bertopic_dists}
+    \end{minipage}
+\end{adjustwidth}
+\end{figure}
+
+After fitting 50 iterations of a BERTopic model on bootstrap samples from each corpus, I selected the model with the highest out-of-bootstrap-sample silhouette score that had between 15 to 30 topics. This range in acceptable number of topics is motivated by my desire to have enough diversity in topics to be able to identify stable themes but not so many topics that the topics themselves are not robust. Upon examination of these topic models, there are some emergent themes in the TikTok discourse for the two groups of followers.
+
+Firstly, there is overlap in the broad categories of topics present in the Harris follower reposts and Trump follower reposts. For example, both of the topic models touch upon music, video games, and sports; however, within these broad categories, the preferences diverge. Trump followers seem to prefer country music, whereas Harris followers enjoy pop and k-pop artists. Trump followers log onto games such as \textit{Rust}\footnote{\textit{Rust} is a multiplayer open-world survival video game. The video game has come under fire for various controversies, perhaps most notably when the game randomly assigned skin color and gender to players' avatars and disallowed customization \parencite{starkey_rust_2015}.} and \textit{R6},\footnote{\textit{Rainbow 6 Siege} is a multiplayer first-person perspective shooter video game.} while Harris followers opt for \textit{Roblox}.\footnote{\textit{Roblox} is an online video game platform that has gained popularity as a platform for players to create their own games.} While both Harris and Trump followers follow football,\footnote{Through examination of topics, I infer that "football" here primarily refers to soccer and rather than American-style football.} Harris followers additionally enjoy volleyball, basketball, and dance.
+
+\begin{figure}
+\begin{adjustwidth}{-2cm}{-2cm}
+    \begin{minipage}{\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{viz/kamala_topic_word_score.png}
+        \includegraphics[width=0.8\linewidth]{viz/trump_topic_word_score.png}
+        \captionsetup{width=0.9\linewidth, justification=centering} 
+        \captionof{figure}{Tf-idf word scores for eight largest topics in each the Harris and Trump topic models depicted on the top and bottom, respectively. Models were selected based on silhouette score and number of topics.}
+        \label{bertopic_word_score}
+    \end{minipage}
+\end{adjustwidth}
+\end{figure}
+
+There are also quirks that hint at some outlier reposts skewing topic representations. For example, Topic 1 in the Harris topic model is represented with the words "ceviche" and "need." Upon closer inspection, this is due to one of the representative reposts simply being the phrase "i need ceviche" repeated 264 times in succession. Interestingly, both topic models contain topics consisting of non-English language, which could point to an international follower base or perhaps a multilingual American follower base.
+
+\begin{figure}[h]
+\begin{adjustwidth}{-2cm}{-2cm}
+    \begin{minipage}{\linewidth}
+        \centering 
+        \includegraphics[width=0.5\linewidth]{viz/kamala_topic_matrix.png}\includegraphics[width=0.5\linewidth]{viz/trump_topic_matrix.png}
+        \captionsetup{width=0.9\linewidth, justification=centering} 
+        \captionof{figure}{Topic similarity matrix for the two selected topic models for the Harris corpus and Trump corpus on the left and right, respectively.}
+        \label{bertopic_topic_matrix}
     \end{minipage}
 \end{adjustwidth}
 \end{figure}
@@ -376,36 +482,37 @@ While the two co-occurrence networks share similar average clustering coefficien
 
 \subsection{Structure and Relation}
 
-1) evidence that Trump has a more centralized and overlapping semantic landscape, and subsequently, Harris having a more concretized, distinct overlapping
-2) consistency with previous literature
+The higher density and higher average node degree for the Trump co-hashtag network suggests that the semantic communities are more largely overlapping and central rather than distinct and peripheral. This finding is consistent with previous literature that finds liberal cultures to be more demographically diverse \parencite{rogers_politicultural_2022}. We also see that for Trump followers, the most central hashtags in the co-occurrence network as well as the itemsets in the highest confidence association rules are largely dominated by engagement hacking hashtags. The most central hashtags and the most concretized associations amongst hashtags are uninformative, which obfuscates the substantive content of Trump followers' reposts but also suggests that much of their cultural and entertainment preferences on TikTok are generic and non-specific. I use the descriptor "generic" here not to suggest broadness or range in the content reposted by Trump followers, but rather to indicate a lack of depth and specificity in the content, such that the most well-defined associations amongst hashtags and the most central hashtags deal primarily with engagement hacking.
 
-\subsection{Content Themes and Culture}
+This contrasts with the Harris co-occurrence network, as while both the Trump and Harris co-occurrence networks share many of the same high-centrality engagement hacking hashtags, the highest confidence Harris association rules focus strongly on substantive, non-hacking hashtags. Namely, Billie Eilish features prominently in the Harris high confidence association rules. The few association rules that do not feature Billie Eilish still contain hashtags with substantive references to media and pop culture. Cultural communities found in the Harris followers' reposts are more distinct from engagement hacking hashtags such that the associations of hashtags within communities can be identified in high-confidence association rules. Note again that although '\#fyp' occurs at a higher frequency in the Harris follower corpus than the Trump follower corpus, '\#fyp' is more prevalent in the high-confidence association rules for Trump followers, reinforcing the idea that cultural community structure of Trump followers' reposts are largely organized around engagement hacking hashtags.
 
-discuss some overarching themes:
+The breadth and diversity of semantic communities across follower bases is difficult to judge. On several measures, it would appear that Harris followers have wider breadth and greater topic diversity. The Harris follower corpus has roughly double the number of unique hashtags compared to the Trump follower corpus. The diameter of the maximal connected component in the Harris co-occurrence network is greater than that of the Trump co-occurrence network. Pivoting to topic modeling, the Harris topic model has lower average pairwise topic cosine similarity than the Trump topic model, indicating lower average semantic similarity across topics. If the difference in the reposting frequency holds consistent for the entirety of the two follower bases, it may well be true that Harris semantic communities have a wider breadth and greater diversity. This calls into question, however, the validity of interpreting the politicultural divide through the lens of TikTok, and what kind of omissions or distortions of cultural and entertainment preferences are present---or rather, not present. 
 
-gender and sexuality
-sports and video games
-music
+\subsection{Themes and Culture in Content}
 
-distinguish between Harris having higher number of distinct, non-overlapping communities and Harris potentially having a more diverse semantic spread -- they're not the same thing! Trump and Harris corpora can be equally diverse in terms of the span of topics but may have different structural relations and distributions
+There are firstly a few surprising patterns that Harris and Trump followers have in common. Both topic models reveal that a portion of the reposted content is in a non-English language, including but not limited to Russian, Spanish, and French. Romantic love and household pets such as cats and dogs show up in both topic models, establishing themselves as ubiquitous features of American life. Interestingly, Christianity and Jesus Christ also appear as a topic in both topic models. While literature shows that Christian nationalism is a driving force in American conservatism, specifically in rallying support for Donald Trump \parencite{whitehead_make_2018} \parencite{baker_keep_2020} \parencite{margolis_who_2020}, the presence of Christianity in both candidates' topic models suggests that conservatism may imply Christianity but not vice versa.
 
-with that being said, do examine semantic diversity, tell them what you find
+The differences in the content reposted by Harris followers and Trump followers span across the categories. In music, we see that Harris followers prefer Billie Eilish, Sabrina Carpenter, and Katseye, while Trump followers enjoy A\$AP Rocky and Korn. Though both candidates' followers enjoy football, Trump followers additionally enjoy Formula 1 racing, while Harris followers are interested in dance.\footnote{The documents in Topic 22, the topic in the Harris topic model that contains dance, contain references to k-pop, a music genre known for its complex dance choreography.}  Trump followers tune into \textit{Dexter},\footnote{The most recent screen adaptation of \textit{Dexter} is \textit{Dexter: Resurrection}, though it is not always clear which adaptation or installment of the \textit{Dexter} franchise the reposts are referring to.} \textit{Doctor Who,} and \textit{Bleach},\footnote{\textit{Bleach} is a Japanese manga series that has been adapted into an anime television series.} but Harris followers prefer to watch \textit{Heated Rivalry,} \textit{Stranger Things,} and \textit{Arcane}.\footnote{\textit{Arcane} is an animated television series based off of the canon of the video game \textit{League of Legends}. Interestingly, \textit{League of Legends} is nowhere present throughout my analysis of Harris followers.} In line with previous literature, my evidence strongly suggests that Democrats and Republicans do indeed exhibit different cultural preferences \parencite{talaifar_lifestyle_2025} \parencite{deichert_partisan_2019} \parencite{lee_how_2021}.
 
-\subsection{Culture Moderated by User Behaviors}
+One broad theme in Trump followers' reposts is violence in various formats and contexts. This violence presents itself across different topic categories; in sports, Trump followers discuss and enjoy UFC (Ultimate Fighting Championship), a martial arts competition league where professionals engage in controlled and precise combat. \textit{Dexter}, a book and television franchise centering the eponymous serial killer, portrays the vigilante and righteous violence of a murderer targeting criminals. \textit{R6} allows players' avatars to wield realistic firearms and imitate the violence enacted in military and police operations. Though the context and moralization, if any, of the violence varies across the relevant topics, the violence itself is central to the topic and furthermore appears as a recurring pattern throughout Trump followers' reposts.
 
-caveats in the data
-1) trump users repost less; why?
-2) billie eilish dominates; why?
-3) non-representativeness and unknowable missingness
+On the other hand, closer examination of Harris followers' reposts reveals a robust connection to the LGBTQ+ community. Some terms and abbreviations referring to the LGBTQ+ community, such as "neptunic"\footnote{Neptunic is a sexual orientation defined as feeling attraction towards female-identifying and non-binary individuals. This orientation is distinct from other sexual identities such as gay or lesbian because the orientation is not defined by reflexivity and can be adopted by individuals of any gender.} and "WLW," appear in the Harris topic model. The television series \textit{Heated Rivalry} centers around the intense and longing relationship between two closeted queer hockey players. \textit{Arcane,} too, features a dynamic and complex relationship between two lesbian main characters. Billie Eilish herself is a member of the LGBTQ+ community, having both sung about and discussed her attraction towards women. This broad connection to the queer community and queer media suggests that a significant portion of Harris's followers are members of this community; at the very least, they make up a larger portion of Harris's followers than Trump's followers.
 
-explain how this impacts the interpretation of the results
+Gendered content becomes an emergent pattern of difference between Harris and Trump followers. Across the board, Harris followers display affinity for content that centers around female celebrities or female protagonists, whereas Trump followers do not. For example, Topic 23 in the Harris topic model represent discussions about new motherhood, coining the nickname "momtok"\footnote{It is not unusual for various communities on TikTok to replace the "Tik" in TikTok with another word to form a nickname. Examples include booktok, dancetok, etc.} to describe the community. In fact, Topic 10 in the Harris model is broadly about the word "girl." The music artists that Harris followers are interested in are primarily female, whereas Trump followers are interested in male artists. Harris followers enjoy sports that have more female representation, such as volleyball and dance, while Trump followers are interested in male-dominated sports, such as football and Formula 1 racing.
 
-insofar as one accepts the results, explain what application or implication this knowledge has. is one group more susceptible to affective polarization? does rallying behind a candidate become more or less doable with the community strucutre?
+While gendered content is not completely indicative of the follower base gender distributions, a primarily female Harris follower base and primarily male Trump follower base are consistent with literature that show women are more likely than men to align with the Democratic Party \parencite{barnes_american_2017} \parencite{schneider_application_2019}. Known as the gender gap in politics, this divide in political attitudes of American men and women has been widening since the 1980s---and it seems to be enduring and present in the young audiences of TikTok.
 
+\subsection{Culture Mediated by Platforms}
+
+I mention at various points throughout this piece that Harris followers have reposted significantly more TikTok videos than Trump followers have. One potential reason could be that Trump followers have newer TikTok accounts and therefore less reposting history. Due to the constraints of the TikTok Research API, however, there is no way to confirm the date an account was created. The other possibility is that this difference in number of reposts is caused by difference in platform usage, which is consistent with literature on partisanship and social media \parencite{mcclain_how_2024}. That difference in how much partisan users repost on TikTok is in and of itself a politicultural division.
+
+This struggle in understanding unexpected results points to the role of TikTok as a mediator between the user and the expression of politicultural preferences. In the framework of my study, partisanship is reduced to following a major party candidate. I have limited my scope to just user reposts, but even still there are finite metadata that can be used to represent and interpret politicultural communities and preferences. Yet, the communities and culture on TikTok are not just malformed and warped representations of the politicultural divide off of social media; it is a new manifestation of these latent preferences, and TikTok is not just a mediator but a producer of culture. Memes, gifs, and trends take on a life unique to social media. The emergent digital culture resembles the broader offline culture, but it also incorporates communities and networks that are inherently tied to the social media platforms we use. The meaning of the hashtag '\#edit' is not comprehensible without short-form video formats. "Momtok" does not exist without TikTok. Harris's "Brat" rebrand could not have been born anywhere else except on social media. While my findings are in line with previous literature on broader politicultural patterns, culture and politics on TikTok are \textit{sui generis} and exist in a capacity unique---and to some extent independent---from broader political and cultural norms.
 
 \section{Conclusion}
 
+I set out at the beginning of this piece to explore how cultural discourse varies in structure and contents across party lines on TikTok. To answer this question, I take presidential candidate accounts as a proxy for party and examine the TikTok videos that were reposted by followers of candidate accounts. To analyze the TikTok repost data, I employ frequent itemset mining, social network analysis, and BERTopic modeling. I find that the semantic communities in Trump followers' reposts are more overlapping and less distinct than those found in Harris followers' reposts. I find that Harris followers' reposts cover a wider breadth of topics. I analyze several emergent themes in the content of the reposts, finding connections to gender, sexuality, and violence. Finally, I examine how TikTok as a platform mediates and produces culture.
 
+As politics, culture, and social media evolve, new and exciting possibilities follow. The continual production of culture and political attitudes will be guided by novel social media platforms and their defined modes for social interaction. Short-form video content is but one form of digital interaction; live-streams, 24-hour story posts, Tweets,\footnote{The social media site formerly known as Twitter, now X, retired the term "Tweet" in their rebrand. Now, X users simply post.} and even fitness tracking apps are all avenues of social interaction that shape and reshape our political attitudes. Though the future of the political landscape remains unknown, it would be prudent to check the notifications on your phone.
 
 %\lipsum[1-3]
 \newpage
