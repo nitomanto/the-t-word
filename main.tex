@@ -52,6 +52,12 @@
 \usepackage{tabularray}
 \usepackage{nameref}
 \usepackage{fancyhdr}
+
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{30B7}{[smiley]}
+\DeclareUnicodeCharacter{2665}{[heart]}
+
+
 \usepackage[style=apa]{biblatex}
     \addbibresource{references_test.bib}
 \usepackage[colorlinks=true, 
@@ -65,6 +71,7 @@
 \usepackage[inkscapelatex=false]{svg}
 \usepackage{comment}
 \usepackage{changepage}
+
 %%  Set biographic information for the title page and document
 
 \newcommand{\thesistitle}{\#2024election: An Exploratory Analysis of Politicultural Communities on TikTok}
@@ -139,10 +146,9 @@ My abstract goes here.
 \section{Introduction}
 On June 7th, 2024, electric pop music artist Charli XCX released her hit album BRAT, which received wide acclaim and garnered huge commercial success. Later that summer, then-Vice President Kamala Harris announced the beginning of her presidential campaign for the upcoming 2024 U.S. Presidential Election. The two seemingly unrelated events would come to intertwine on the social media app and platform TikTok, as a strange remix of Charli XCX’s song Apple incorporating an audio clip of Harris speaking at a press conference exploded in popularity \parencite{clarke-billings_what_2024}.\footnote{As of writing, the most-liked TikTok post playing this “Coconut” remix of Charli XCX’s "Apple" has over 6.7 million views and over 1.2 million likes total.}  In order for this bizarre combination of politics and music to skyrocket into virality, there needed to be some overlap in the groups of TikTok users who knew of Charli XCX and users who knew of former Vice President Kamala Harris. The question remains, how much overlap was there between those two groups? For this research proposal, I explore TikTok to ask if partisan preference is associated with difference in culture and entertainment preferences on the platform. This can be broken down into two main research questions:
 
-RQ 1: Of the TikTok users who followed official TikTok campaign accounts, what are the topics of those users’ reposted TikTok posts as represented by each post's hashtags and caption information?
+RQ 1: How do the semantic and cultural communities of Democrats and Republicans on TikTok differ structurally?
 
-RQ 2: Of the TikTok users who followed official TikTok campaign accounts, what are the network structures of co-occurring hashtags in the TikTok posts that were reposted by those followers, and how do they compare with each other?
-
+RQ 2: How do the the topics and contents of these communities compare across Democrats and Republicans on TikTok?
 
 \section{Literature Review}
 
@@ -353,7 +359,8 @@ However, turning to Figure \ref{confidence_lift}, we see that the distribution o
     \caption{Network-level descriptive statistics for the Harris and Trump hashtag co-occurrence social networks. Average Clustering Coefficient and Diameter are approximated with built-in networkx approximation algorithms, and the numbers shown here is a lower bound for the true value. Note that edges are weighted by the number of co-occurrences for any two hashtags.}
 \end{table}
 
-\begin{table}[h]    
+\begin{table}[h]
+    \centering
     \begin{tblr}{
         %cell{4}{2} = {c=5}{c},
         %vline{2} = {-}{},
@@ -376,9 +383,9 @@ Pivoting now to the hashtag co-occurrence networks, we begin to find high-level 
 
 Table \ref{network_t_test} demonstrates that the Trump co-occurrence network, alongside being denser, has a higher average degree and higher average betweenness than the Harris co-occurrence network. This suggests that the semantic communities in the Trump co-occurrence network are more centrally concentrated and overlapping than those found in the Harris co-occurrence network.
 
-As shown in Section \ref{frequent_itemset_mining}, engagement hacking hashtags appear frequently in both Harris and Trump follower reposts, and this is corroborated by the high centrality measures of engagement hacking hashtags in the co-occurrence networks. Notice in Figure \ref{high_centrality_nodes} that several of the high betweenness hashtags for both the Harris and Trump co-occurrence networks are not engagement hacking hashtags, but instead refer to substantively informative topics. One might conceptualize these substantive high betweenness hashtags as common and far-reaching topics that bridge disparate semantic communities. For the Trump co-occurrence network, those hashtags are '\#christmas', '\#history', and '\#sharinganeyes'.\footnote{The phrase "sharingan eyes" is a pop culture reference that originates from the Japanese manga and anime series \textit{Naruto}.} In the Harris co-occurrence network, these semantic bridges are '\#art' and '\#funny'.
+As shown in Section \ref{frequent_itemset_mining}, engagement hacking hashtags appear frequently in both Harris and Trump follower reposts, and this is corroborated by the high centrality measures of engagement hacking hashtags in the co-occurrence networks. Notice in Table \ref{high_centrality_nodes} that several of the high betweenness hashtags for both the Harris and Trump co-occurrence networks are not engagement hacking hashtags, but instead refer to substantively informative topics. One might conceptualize these substantive high betweenness hashtags as common and far-reaching topics that bridge disparate semantic communities. For the Trump co-occurrence network, those hashtags are '\#christmas', '\#history', and '\#sharinganeyes'.\footnote{The phrase "sharingan eyes" is a pop culture reference that originates from the Japanese manga and anime series \textit{Naruto}.} In the Harris co-occurrence network, these semantic bridges are '\#art' and '\#funny'.
 
-While the two co-occurrence networks share similar average clustering coefficients and degree assortativity coefficient, the higher lift and confidence distribution for the Harris frequent itemsets in combination with a higher average node degree in the Trump co-occurrence network can provide an idea. These measures are consistent with Harris followers having more distinct, non-overlapping semantic communities and Trump followers having less distinct, overlapping semantic communities.
+While the two co-occurrence networks share similar average clustering coefficients and degree assortativity coefficient, the higher lift and confidence distribution for the Harris frequent itemsets in combination with a higher average node degree in the Trump co-occurrence network can provide an idea. These measures are consistent with Harris followers having more distinct, non-overlapping semantic communities and Trump followers having less distinct, overlapping semantic communities. While from a topological standpoint these networks resemble each other, the difference in node degree distributions suggests that the communities within the Trump co-occurrence network are more interlinked; in combination with the fact with the smaller network size, this can be interpreted to be that the Trump co-occurrence network is more coherent and connected than that of Harris.
 
 \begin{figure}[t]
 \begin{adjustwidth}{-2cm}{-2cm}
@@ -392,7 +399,7 @@ While the two co-occurrence networks share similar average clustering coefficien
 \end{adjustwidth}
 \end{figure}
 
-%\begin{comment}
+\begin{comment}
 \begin{figure}[t]
 \begin{adjustwidth}{-2cm}{-2cm}
     \begin{minipage}{\linewidth}
@@ -404,29 +411,65 @@ While the two co-occurrence networks share similar average clustering coefficien
     \end{minipage}
 \end{adjustwidth}
 \end{figure}
-%\end{comment}
+\end{comment}
 
-\begin{table}[h]    
+\begin{table}
+    \centering
     \begin{tblr}{
         cell{1}{1} = {c=6}{c},
-        cell{1}{7} = {c=6}{c},
         cell{2}{1} = {c=2}{c},
         cell{2}{3} = {c=2}{c},
         cell{2}{5} = {c=2}{c},
-        cell{2}{7} = {c=2}{c},
-        cell{2}{9} = {c=2}{c},
-        cell{2}{11} = {c=2}{c},
         %vline{2} = {-}{},
         %cell{5}{1} = {c=6}{c},
         hline{2} = {-}{},
         hline{3} = {-}{},
         hline{4} = {-}{},
+        hline{14} = {-}{}
         }
-        Harris High Centrality Nodes & & & & & & Trump High Centrality Nodes & & & & & \\
-        
+        Harris High Centrality Nodes & & & & &  \\
+        Degree & & Betweenness	&& Pagerank & \\
+        Hashtag &	Value &	Hashtag &	Value &	Hashtag &	Value \\
+        fyp &	0.5426 &fyp&	0.3516&	fyp&	0.0432 \\
+        viral &	0.2687 & viral & 0.071 & viral & 0.0163 \\
+        foryou &	0.2213	& foryoupage	&0.0684	&foryou	&0.0109 \\
+        foryoupage	&0.2196	&foryou	&0.0465	&foryoupage	&0.0109 \\
+        fypシ	&0.1600	&fypシ	&0.0365	&fypシ	&0.0070 \\
+        edit	&0.148	&edit	&0.0285	&edit	&0.0069 \\
+        trending	&0.1067	&art	&0.0245	&relatable	&0.0051\\
+        fypシ゚viral	&0.0942	&fy	&0.0234	&trending	&0.0043 \\
+        fy	&0.0940 &funny	&0.0231	&funny	&0.0042 \\
+        fyppppppppppppppppppppppp	&0.0915	&goviraltiktok♥️	&0.0198	&xyzbca	&0.0037 \\
+        &&&&& \\
+    \end{tblr}
+    \begin{tblr}{
+        cell{1}{1} = {c=6}{c},
+        cell{2}{1} = {c=2}{c},
+        cell{2}{3} = {c=2}{c},
+        cell{2}{5} = {c=2}{c},
+        %vline{2} = {-}{},
+        %cell{5}{1} = {c=6}{c},
+        hline{2} = {-}{},
+        hline{3} = {-}{},
+        hline{4} = {-}{},
+        hline{14} = {-}{}
+        }
+        Trump High Centrality Nodes & & & & &  \\
+        Degree & & Betweenness	&& Pagerank & \\
+        Hashtag &	Value &	Hashtag &	Value &	Hashtag &	Value \\
+        fyp	&0.4882	&fyp	&0.3755	&fyp	&0.0401 \\
+        viral	&0.2429	&viral&	0.0755&	viral	&0.0157 \\
+        foryou	&0.1943	&foryou	&0.0729	&foryou	&0.0104 \\
+        foryoupage	&0.1735	&foryoupage	&0.0428	&foryoupage	&0.0086 \\
+        fypシ	&0.1208	&edit	&0.0286	&edit	&0.0057 \\
+        edit	&0.1079	&capcut	&0.0275	&fypシ	&0.0054 \\
+        trending	&0.0937	&fypシ	&0.0225	&relatable	&0.0041 \\
+        fy	&0.0846	&sharinganeyes	&0.0195	&trending	&0.0038 \\
+        funny	&0.0754	&christmas	&0.0192	&funny	&0.0037 \\
+        relatable	&0.0753	&history	&0.0179	&fy	&0.0032\\
     \end{tblr}
     \captionsetup{justification=centering}
-    \caption{Hashtags with high centrality in the Harris and Trump co-occurrence networks displayed on the left and right, respectively.}
+    \caption{Hashtags with high centrality in the Harris and Trump co-occurrence networks displayed on the top and bottom, respectively.}
     \label{high_centrality_nodes}
 \end{table}
 
@@ -513,6 +556,12 @@ This struggle in understanding unexpected results points to the role of TikTok a
 I set out at the beginning of this piece to explore how cultural discourse varies in structure and contents across party lines on TikTok. To answer this question, I take presidential candidate accounts as a proxy for party and examine the TikTok videos that were reposted by followers of candidate accounts. To analyze the TikTok repost data, I employ frequent itemset mining, social network analysis, and BERTopic modeling. I find that the semantic communities in Trump followers' reposts are more overlapping and less distinct than those found in Harris followers' reposts. I find that Harris followers' reposts cover a wider breadth of topics. I analyze several emergent themes in the content of the reposts, finding connections to gender, sexuality, and violence. Finally, I examine how TikTok as a platform mediates and produces culture.
 
 As politics, culture, and social media evolve, new and exciting possibilities follow. The continual production of culture and political attitudes will be guided by novel social media platforms and their defined modes for social interaction. Short-form video content is but one form of digital interaction; live-streams, 24-hour story posts, Tweets,\footnote{The social media site formerly known as Twitter, now X, retired the term "Tweet" in their rebrand. Now, X users simply post.} and even fitness tracking apps are all avenues of social interaction that shape and reshape our political attitudes. Though the future of the political landscape remains unknown, it would be prudent to check the notifications on your phone.
+
+\vfill
+{\normalsize \section*{Data and Code Availability Statement}}
+
+To reference the code and figures associated with this thesis, visit this
+\href{https://github.com/UC-MACSS/example/}{GitHub repository}. In compliance with TikTok's Terms and Conditions, I have not released the full dataset that I used for analysis; instead, I provide the Video IDs of all the reposts in my dataset along with the candidate associated with each repost in addition to the script used for scraping. These Video IDs can be used to query the TikTok Research API Tool and scrape all relevant metadata, including the metadata used in this study. For more information on accessing the TikTok Research API Tool, visit TikTok's Developer Tools website \href{https://developers.tiktok.com/products/research-api/}{here}. For replication purposes, the TikTok account @kamalahq has been renamed to @headquarters, and can possibly change again in the future.
 
 %\lipsum[1-3]
 \newpage
