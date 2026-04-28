@@ -354,9 +354,9 @@ However, turning to Figure \ref{confidence_lift}, we see that the distribution o
         Degree Assortativity & -0.0368  &-0.0388 \\
         Diameter (Maximal Component) &11 &9
     \end{tblr}
-    \label{network_stats}
     \captionsetup{justification=centering}
     \caption{Network-level descriptive statistics for the Harris and Trump hashtag co-occurrence social networks. Average Clustering Coefficient and Diameter are approximated with built-in networkx approximation algorithms, and the numbers shown here is a lower bound for the true value. Note that edges are weighted by the number of co-occurrences for any two hashtags.}
+    \label{network_stat}
 \end{table}
 
 \begin{table}[h]
@@ -379,7 +379,7 @@ However, turning to Figure \ref{confidence_lift}, we see that the distribution o
     \label{network_t_test}
 \end{table}
 
-Pivoting now to the hashtag co-occurrence networks, we begin to find high-level structural patterns in the semantic discourse. A glance at Table \ref{network_stats} shows that the the Harris network is larger, both in terms of nodes and edges as well as the diameter of the maximal component. This is in line with expectations, as there are more Harris follower reposts than Trump follower reposts. Interestingly,  despite the fact that Harris followers had higher average hashtags per repost, as shown in Section \ref{frequent_itemset_mining}, the Harris co-occurrence network has lower density. 
+Pivoting now to the hashtag co-occurrence networks, we begin to find high-level structural patterns in the semantic discourse. A glance at Table \ref{network_stat} shows that the the Harris network is larger, both in terms of nodes and edges as well as the diameter of the maximal component. This is in line with expectations, as there are more Harris follower reposts than Trump follower reposts. Interestingly,  despite the fact that Harris followers had higher average hashtags per repost, as shown in Section \ref{frequent_itemset_mining}, the Harris co-occurrence network has lower density. 
 
 Table \ref{network_t_test} demonstrates that the Trump co-occurrence network, alongside being denser, has a higher average degree and higher average betweenness than the Harris co-occurrence network. This suggests that the semantic communities in the Trump co-occurrence network are more centrally concentrated and overlapping than those found in the Harris co-occurrence network.
 
