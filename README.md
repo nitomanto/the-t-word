@@ -20,7 +20,7 @@ From official presidential campaign TikTok accounts, I will gather all of the pu
 
 
 ```
-
+├── 2024election An Exploratory Analysis of Politicultural Communities on TikTok
 ├── README.md: this file
 ├── association_rules.csv: CSV containing data of mined hashtag association rules
 ├── bertopic_crossfold.ipynb: Notebook containing code for BERTopic analysis. This notebook was initially hosted on Google CoLab for access to GPU compute resource.
