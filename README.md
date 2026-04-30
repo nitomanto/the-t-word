@@ -22,7 +22,6 @@ From official presidential campaign TikTok accounts, I will gather all of the pu
 ```
 
 ├── README.md: this file
-├── annot_bib.bib: DELETE ME
 ├── association_rules.csv: CSV containing data of mined hashtag association rules
 ├── bertopic_crossfold.ipynb: Notebook containing code for BERTopic analysis. This notebook was initially hosted on Google CoLab for access to GPU compute resource.
 ├── k_betweenness.json: JSON file containing data of betweenness scores for nodes in the Harris co-occurrence hashtag network
@@ -30,12 +29,10 @@ From official presidential campaign TikTok accounts, I will gather all of the pu
 ├── k_pagerank.json: JSON file containing data of pagerank scores for nodes in the Harris co-occurrence hashtag network
 ├── kamala_nodes_measure.csv: CSV file containing betweenness, degree, and pagerank scores of nodes in the Harris co-occurrence hashtag network. A consolidation of the data found in k_betweenness.json, k_degree.json, and k_pagerank.json
 ├── kamalahq_hashtag_network.edgelist: an edgelist file for the Harris co-occurrence hashtag network
-├── kamalahq_hashtag_network.graphml: a GRAPHml file for the Harris co-occurrence hashtag network. DELETE ME
 ├── main.tex: a LaTex file with typesetting for the thesis draft(s)
 ├── network.ipynb: Notebook containing code for creating, analyzing, and visualizing co-occurrence hashtag networks
 ├── network_t_test.csv: CSV containing information for Table 2 (is labeled \ref{network_stat} in the main.tex)
 ├── references_test.bib: BIB file for all the references cited in the thesis
-├── requirements.txt: DELETE ME (out of date)
 ├── scraping.py: Python script containing all the code used for scraping TikTok video data. Note: in order to run this script, it requires the user to obtain access to the TikTok Research Tools API
 ├── spark_itemset.ipynb: Notebook containing all the code used to mine and analyze frequent hashtag itemsets
 ├── t_betweenness.json: JSON file containing data of betweenness scores for nodes in the Trump co-occurrence hashtag network
