@@ -92,6 +92,8 @@ From official presidential campaign TikTok accounts, I will gather all of the pu
     └── trump_topic_word_score.png
 ```
 
+Find the anonymized data at [this link](https://drive.google.com/file/d/1CFcn9rO8CGKSo6R_WhLN_BuFJlJExkT2/view?usp=sharing)
+
 ## How to Cite
 
 Sun, Anita (2026). _#2024election: An Exploratory Analysis of Politicultural Communities on TikTok_. https://github.com/nitomanto/the-t-word.
