@@ -1,4 +1,4 @@
-# #2024election: An Exploratory Analysis of Politicultural Communities on TikTok (Anticipated Completion, June 2026)
+# #2024election: An Exploratory Analysis of Politicultural Communities on TikTok
 
 ## University of Chicago Computational Social Science Master's Thesis
 
